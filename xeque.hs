@@ -8,7 +8,7 @@ Nome: Vitor Tibães Santos  RA: 10418976
 --verifica se rainha branca esta contida
 cont[] = False
 cont(a:xs)
-  |a == 'D' = True
+  |a == 't' = True
   |otherwise = cont xs
 
 --analise de tabuleiro para buscar local da rainha branca
@@ -24,9 +24,9 @@ buscaLinha(a:xs)
   |otherwise = 1 + buscaLinha xs
 
 --buscando coluna onde se localiza a rainha branca
-buscaColuna [] = -1
+buscaColuna [] = 0
 buscaColuna(a:xs)
-  |a == 'D' = 1 + buscaColuna []
+  |a == 't' = 1 + buscaColuna []
   |otherwise = 1 + buscaColuna xs
   
 
@@ -39,4 +39,3 @@ main =  do
         
         --executando verificação
         print (vetorDaRainha, linha, coluna)
-
