@@ -21,7 +21,7 @@ run(a:xs)
 buscaLinha [] = 0
 buscaLinha(a:xs) 
   |cont a = 1 + buscaLinha []
-  |otherwise = buscaLinha xs
+  |otherwise = 1 + buscaLinha xs
 
 --buscando coluna onde se localiza a rainha branca
 buscaColuna [] = -1
